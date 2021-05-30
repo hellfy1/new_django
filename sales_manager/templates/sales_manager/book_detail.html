@@ -5,13 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Hello, this is maine page</h1>
-    <hr>
-    {% for book in books %}
-    <a href="{% url 'book-detail' book_id=book.id %}">{{ book.title }}</a><br>
+    <h1>Book Detail Page</h1>
+        {{ book.title }}<br>
         {{ book.text }}<br>
     <i>{{ book.author }}</i><br>
         {{ book.date_publish|date:"d-m-Y" }}<br><br>
-    {% endfor %}
 </body>
 </html>
